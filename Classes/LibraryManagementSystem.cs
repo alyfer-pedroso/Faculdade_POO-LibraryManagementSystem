@@ -24,24 +24,22 @@ namespace LibraryManagementSystemSpace.Classes
 
         public void DeleteLibraryItem(LibraryItem item)
         {
-            try
+            if (LibraryItems.Count > 0 && LibraryItems.Contains(item))
             {
                 LibraryItems.Remove(item);
-            } catch
-            {
-                Console.WriteLine("Item not found!");
+                return;
             }
+            Console.WriteLine("Library item not found!");
         }
 
         public void DeleteMember(Member member)
         {
-            try
+            if (Members.Count > 0 && Members.Contains(member))
             {
                 Members.Remove(member);
-            } catch
-            {
-                Console.WriteLine("Member not found!");
+                return;
             }
+            Console.WriteLine("Member not found!");
         }
     }
 }
