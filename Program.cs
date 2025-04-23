@@ -1,4 +1,6 @@
-﻿namespace LibraryManagementSystem
+﻿using LibraryManagementSystemSpace.Classes;
+
+namespace LibraryManagementSystemSpace
 {
     internal class Program
     {
